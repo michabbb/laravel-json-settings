@@ -1,22 +1,22 @@
 <?php
 
-namespace RyanChandler\LaravelJsonSettings\Facades;
+namespace macropage\LaravelJsonSettings\Facades;
 
 use Illuminate\Support\Facades\Facade;
-use RyanChandler\LaravelJsonSettings\SettingsRepository;
+use macropage\LaravelJsonSettings\SettingsRepository;
 
 /**
- * @method static mixed get(string $key, mixed $default = null)
- * @method static static set(string $key, mixed $value, bool $save = true)
- * @method static bool has(string $key)
- * @method static static reload()
- * @method static static save()
+ * @method static mixed get(string $key, mixed $default = null, ?string $namespace = null)
+ * @method static static set(string $key, mixed $value, bool $save = true, ?string $namespace = null)
+ * @method static bool has(string $key, ?string $namespace = null)
+ * @method static static reload(?string $namespace)
+ * @method static static save(int $flags, ?string $namespace = null)
  *
- * @see \RyanChandler\LaravelJsonSettings\SettingsRepository
+ * @see \macropage\LaravelJsonSettings\SettingsRepository
  */
 class Settings extends Facade
 {
-    protected static function getFacadeAccessor()
+    protected static function getFacadeAccessor(): string
     {
         return SettingsRepository::class;
     }

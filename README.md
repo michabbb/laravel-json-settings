@@ -1,9 +1,13 @@
-# Store your Laravel application settings in an on-disk JSON file.
+# Store your Laravel application settings in JSON files.
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/ryangjchandler/laravel-json-settings.svg?style=flat-square)](https://packagist.org/packages/ryangjchandler/laravel-json-settings)
-[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/ryangjchandler/laravel-json-settings/run-tests?label=tests)](https://github.com/ryangjchandler/laravel-json-settings/actions?query=workflow%3Arun-tests+branch%3Amain)
-[![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/ryangjchandler/laravel-json-settings/Check%20&%20fix%20styling?label=code%20style)](https://github.com/ryangjchandler/laravel-json-settings/actions?query=workflow%3A"Check+%26+fix+styling"+branch%3Amain)
-[![Total Downloads](https://img.shields.io/packagist/dt/ryangjchandler/laravel-json-settings.svg?style=flat-square)](https://packagist.org/packages/ryangjchandler/laravel-json-settings)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/macropage/laravel-json-settings.svg?style=flat-square)](https://packagist.org/packages/macropage/laravel-json-settings)
+[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/michabbb/laravel-json-settings/run-tests?label=tests)](https://github.com/michabbb/laravel-json-settings/actions?query=workflow%3Arun-tests+branch%3Amain)
+[![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/michabbb/laravel-json-settings/Check%20&%20fix%20styling?label=code%20style)](https://github.com/michabbb/laravel-json-settings/actions?query=workflow%3A"Check+%26+fix+styling"+branch%3Amain)
+[![Total Downloads](https://img.shields.io/packagist/dt/michabbb/laravel-json-settings.svg?style=flat-square)](https://packagist.org/packages/macropage/laravel-json-settings)
+
+This is a fork of https://github.com/ryangjchandler/laravel-json-settings  
+The main change is: I added namespaces that get saved into individual files.  
+I still don´t know if that is good idea, so let´s find out ;)
 
 This package provides a simple `SettingsRepository` class that can be used to store your application's settings in a single JSON file.
 
@@ -18,12 +22,12 @@ composer require ryangjchandler/laravel-json-settings
 You can publish the config file with:
 
 ```bash
-php artisan vendor:publish --tag="laravel-json-settings-config"
+php artisan vendor:publish --tag="json-settings-config"
 ```
 
 ## Usage
 
-You can resolve an instance of `RyanChandler\LaravelJsonSettings\SettingsRepository` from the container by type-hinting it in any DI-supported method, e.g. a controller method.
+You can resolve an instance of `macropage\LaravelJsonSettings\SettingsRepository` from the container by type-hinting it in any DI-supported method, e.g. a controller method.
 
 ```php
 class IndexController
@@ -45,7 +49,7 @@ The `SettingsRepository` class contains the following methods:
 * `save()` - manually save your settings back to disk.
 * `reload()` - clear the cache and reload the settings from disk.
 
-If you prefer to use facades, you can interact with the `RyanChandler\LaravelJsonSettings\Facades\Settings` facade directly too.
+If you prefer to use facades, you can interact with the `macropage\LaravelJsonSettings\Facades\Settings` facade directly too.
 
 ## Testing
 
@@ -53,20 +57,13 @@ If you prefer to use facades, you can interact with the `RyanChandler\LaravelJso
 composer test
 ```
 
-## Changelog
-
-Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
-
 ## Contributing
 
 Please see [CONTRIBUTING](.github/CONTRIBUTING.md) for details.
 
-## Security Vulnerabilities
-
-Please review [our security policy](../../security/policy) on how to report security vulnerabilities.
-
 ## Credits
 
+- [Michael Bladowski](https://github.com/michabbb)
 - [Ryan Chandler](https://github.com/ryangjchandler)
 - [All Contributors](../../contributors)
 

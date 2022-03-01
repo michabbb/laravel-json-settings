@@ -1,10 +1,10 @@
 <?php
 
-namespace RyanChandler\LaravelJsonSettings\Tests;
+namespace macropage\LaravelJsonSettings\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use RyanChandler\LaravelJsonSettings\LaravelJsonSettingsServiceProvider;
+use macropage\LaravelJsonSettings\LaravelJsonSettingsServiceProvider;
 
 class TestCase extends Orchestra
 {
@@ -13,18 +13,18 @@ class TestCase extends Orchestra
         parent::setUp();
 
         Factory::guessFactoryNamesUsing(
-            fn (string $modelName) => 'RyanChandler\\LaravelJsonSettings\\Database\\Factories\\'.class_basename($modelName).'Factory'
+            static fn (string $modelName) => 'macropage\\LaravelJsonSettings\\Database\\Factories\\' . class_basename($modelName) . 'Factory'
         );
     }
 
-    protected function getPackageProviders($app)
+    protected function getPackageProviders($app): array
     {
         return [
             LaravelJsonSettingsServiceProvider::class,
         ];
     }
 
-    public function getEnvironmentSetUp($app)
+    public function getEnvironmentSetUp($app): void
     {
         config()->set('database.default', 'testing');
 

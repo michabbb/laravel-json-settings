@@ -1,6 +1,6 @@
 {
     "name": "macropage/laravel-json-settings",
-    "description": "Store your Laravel application settings in multiple JSON files.",
+    "description": "Store your Laravel application settings in one or multiple JSON files.",
     "keywords": [
         "macropage",
         "laravel",
@@ -26,6 +26,7 @@
         "illuminate/contracts": "^9.0"
     },
     "require-dev": {
+        "kint-php/kint": "^4.1",
         "nunomaduro/collision": "^6.0",
         "nunomaduro/larastan": "^1.0",
         "orchestra/testbench": "^7.0",
@@ -39,8 +40,7 @@
     },
     "autoload": {
         "psr-4": {
-            "macropage\\LaravelJsonSettings\\": "src",
-            "macropage\\LaravelJsonSettings\\Database\\Factories\\": "database/factories"
+            "macropage\\LaravelJsonSettings\\": "src"
         }
     },
     "autoload-dev": {

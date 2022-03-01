@@ -12,7 +12,8 @@ return [
     |
     */
 
-    'path' => storage_path('settings.json'),
+    'path'           => storage_path('settings.json'),
+    'namespace_path' => storage_path('settings_json'),
 
     /*
     |--------------------------------------------------------------------------
@@ -26,8 +27,9 @@ return [
     */
 
     'cache' => [
-        'key' => 'json-settings',
-        'tag' => null,
+        'key'                  => 'json-settings',
+        'key_prefix_namespace' => 'json-settings__',
+        'tag'                  => 'json-settings',
     ],
 
 ];
