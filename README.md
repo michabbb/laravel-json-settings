@@ -16,7 +16,7 @@ This package provides a simple `SettingsRepository` class that can be used to st
 You can install the package via composer:
 
 ```bash
-composer require ryangjchandler/laravel-json-settings
+composer require macropage/laravel-json-settings
 ```
 
 You can publish the config file with:
