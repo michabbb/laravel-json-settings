@@ -1,17 +1,22 @@
 {
-    "name": "ryangjchandler/laravel-json-settings",
-    "description": "Store your Laravel application settings in an on-disk JSON file.",
+    "name": "macropage/laravel-json-settings",
+    "description": "Store your Laravel application settings in multiple JSON files.",
     "keywords": [
-        "ryangjchandler",
+        "macropage",
         "laravel",
         "laravel-json-settings"
     ],
-    "homepage": "https://github.com/ryangjchandler/laravel-json-settings",
+    "homepage": "https://github.com/michabbb/laravel-json-settings",
     "license": "MIT",
     "authors": [
         {
             "name": "Ryan Chandler",
             "email": "support@ryangjchandler.co.uk",
+            "role": "Developer"
+        },
+        {
+            "name": "Michael Bladowski",
+            "email": "info@macropage.de",
             "role": "Developer"
         }
     ],
@@ -34,13 +39,13 @@
     },
     "autoload": {
         "psr-4": {
-            "RyanChandler\\LaravelJsonSettings\\": "src",
-            "RyanChandler\\LaravelJsonSettings\\Database\\Factories\\": "database/factories"
+            "macropage\\LaravelJsonSettings\\": "src",
+            "macropage\\LaravelJsonSettings\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "RyanChandler\\LaravelJsonSettings\\Tests\\": "tests"
+            "macropage\\LaravelJsonSettings\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -54,10 +59,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "RyanChandler\\LaravelJsonSettings\\LaravelJsonSettingsServiceProvider"
+                "macropage\\LaravelJsonSettings\\LaravelJsonSettingsServiceProvider"
             ],
             "aliases": {
-                "LaravelJsonSettings": "RyanChandler\\LaravelJsonSettings\\Facades\\LaravelJsonSettings"
+                "LaravelJsonSettings": "macropage\\LaravelJsonSettings\\Facades\\LaravelJsonSettings"
             }
         }
     },
